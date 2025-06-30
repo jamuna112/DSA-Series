@@ -3,9 +3,9 @@ package sorting
 import "fmt"
 
 /*
-	Bubble sort is a sorting algo. which starts from the first element 
-	of an array and compare with the second element. Whichever is greater 
-	element we swap them, it continues the process and 
+	Bubble sort is a sorting algo. which starts from the first element
+	of an array and compare with the second element. Whichever is greater
+	element we swap them, it continues the process and
 */
 
 func BubbleSort(arr []int) []int {
