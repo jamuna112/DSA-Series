@@ -7,7 +7,7 @@ type Node struct {
 	Next *Node
 }
 
-type LinkedList struct { 
+type LinkedList struct {
 	Head *Node
 }
 
@@ -23,11 +23,35 @@ func (l *LinkedList) PushFront(data int) {
 
 }
 
-func (l *LinkedList) PrintList() {
-	current := l.Head
-	for current != nil {
-		fmt.Print(current.Data, " ")
+// push back
+func (ll *LinkedList) PushBack(data int) {
+
+	newNode := &Node{Data: data}
+
+	if ll.Head == nil {
+		ll.Head = newNode
+		return
+	}
+
+	//traverse to the last node
+	current := ll.Head
+	for current.Next != nil {
 		current = current.Next
 	}
-	fmt.Println()	
+
+	//append the new node
+	current.Next = newNode
+}
+
+func (l *LinkedList) PrintList() string {
+
+	var result string
+	temp := l.Head
+
+	for temp != nil {
+		result += fmt.Sprintf("%v->", temp.Data)
+		temp = temp.Next
+	}
+
+	return result
 }
