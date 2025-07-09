@@ -1,7 +1,5 @@
 package lnklist
 
-import "fmt"
-
 type Node struct {
 	Data int
 	Next *Node
@@ -81,17 +79,4 @@ func (l *LinkedList) PopBack() (int, bool) {
 
 	prev.Next = nil //remove last node
 	return curr.Data, true
-}
-
-func (l *LinkedList) PrintList() string {
-
-	var result string
-	temp := l.Head
-
-	for temp != nil {
-		result += fmt.Sprintf("%v->", temp.Data)
-		temp = temp.Next
-	}
-
-	return result
 }
