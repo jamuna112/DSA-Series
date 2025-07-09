@@ -43,6 +43,46 @@ func (ll *LinkedList) PushBack(data int) {
 	current.Next = newNode
 }
 
+// Pop front
+func (l *LinkedList) PopFront() (int, bool) {
+
+	if l.Head == nil {
+		return 0, false
+	}
+
+	val := l.Head.Data
+	l.Head = l.Head.Next
+
+	return val, true
+
+}
+
+// pop back
+func (l *LinkedList) PopBack() (int, bool) {
+	if l.Head == nil {
+		return 0, false // list is empty
+	}
+
+	//if list has only one node
+	if l.Head.Next == nil {
+		temp := l.Head.Data
+		l.Head = nil
+		return temp, true
+	}
+
+	//if list has multiple nodes, traverse to the second last node
+	prev := l.Head
+	curr := l.Head.Next
+
+	for curr.Next != nil {
+		prev = curr
+		curr = curr.Next
+	}
+
+	prev.Next = nil //remove last node
+	return curr.Data, true
+}
+
 func (l *LinkedList) PrintList() string {
 
 	var result string

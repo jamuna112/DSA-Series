@@ -62,6 +62,72 @@ func TestPushBack(t *testing.T) {
 	}
 }
 
+func TestPopFront(t *testing.T) {
+	list := &LinkedList{}
+
+	//test empty list
+	val, okay := list.PopFront()
+
+	if okay || val != 0 {
+		t.Errorf("test failed, expected 0, and false empty list but got %d, %v", val, okay)
+	}
+
+	//add items
+	list.PushBack(10)
+	list.PushBack(20)
+	list.PushBack(30)
+	list.PushBack(40)
+
+	//pop first item
+	val, ok := list.PopFront()
+
+	if val != 10 || !ok {
+		t.Errorf("expected %d and %v but got %v, and %v", 10, true, val, ok)
+	}
+
+	//pop second item
+
+	val, ok = list.PopFront()
+	if val != 20 || ok != true {
+		t.Errorf("expected %d and %v but got %v, and %v", 20, true, val, ok)
+
+	}
+}
+
+func TestPopBack(t *testing.T) {
+	list := &LinkedList{}
+
+	//when list is empty
+	val, okay := list.PopBack()
+
+	if val != 0 || okay {
+		t.Errorf("test failed, expected 0, and false on empty list but got %d and %v", val, okay)
+	}
+
+	//add one item to the list
+	list.PushFront(100)
+
+	val, okay = list.PopBack()
+
+	if val != 100 || okay != true {
+		t.Errorf("test failed, expected 100, and true from list but got %d and %v", val, okay)
+
+	}
+
+	//add more items to the list
+	list.PushFront(200)
+	list.PushFront(300)
+	list.PushFront(400)
+
+	val, okay = list.PopBack()
+
+	if val != 200 || okay != true {
+		t.Errorf("test failed, expected 200, and true from list but got %d and %v", val, okay)
+
+	}
+
+}
+
 func TestPrintList(t *testing.T) {
 
 	tests := []struct {
