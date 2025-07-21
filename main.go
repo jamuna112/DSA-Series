@@ -28,10 +28,15 @@ func main() {
 	// list.Pop_Back()
 	// list.PrintDoublyList()
 
-	nums1 := []int{4, 1, 2}
+	//nums1 := []int{4, 1, 2}
 	nums2 := []int{1, 3, 4, 2}
 
-	ans := stack.NextGreaterElement1(nums1, nums2)
-	fmt.Print("ans is ", ans)
+	// ans := stack.NextGreaterElement1(nums1, nums2)
+	// // fmt.Print("ans is ", ans)
+
+	valStack := stack.ReverseStack(nums2)
+	for _, val := range valStack {
+		fmt.Printf("%d ", val)
+	}
 
 }
