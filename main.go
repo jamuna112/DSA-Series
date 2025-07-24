@@ -2,7 +2,7 @@ package main
 
 import (
 	"dsa-series/lnklist"
-	"dsa-series/stack"
+	"dsa-series/search"
 	"fmt"
 )
 
@@ -29,14 +29,18 @@ func main() {
 	// list.PrintDoublyList()
 
 	//nums1 := []int{4, 1, 2}
-	nums2 := []int{1, 3, 4, 2}
+	//nums2 := []int{1, 3, 4, 2}
 
 	// ans := stack.NextGreaterElement1(nums1, nums2)
 	// // fmt.Print("ans is ", ans)
 
-	valStack := stack.ReverseStack(nums2)
-	for _, val := range valStack {
-		fmt.Printf("%d ", val)
-	}
+	// valStack := stack.ReverseStack(nums2)
+	// for _, val := range valStack {
+	// 	fmt.Printf("%d ", val)
+	// }
 
+	binaryArr := []int{5, 6, 7, 8, 9, 10, 11, 12, 13}
+	target := 13
+	output := search.BinarySearch(binaryArr, target)
+	fmt.Println("Using binary search", output)
 }
