@@ -6,7 +6,7 @@ func BinarySearch(input []int, target int) int {
 
 	for st <= end {
 
-		mid := (st + end) / 2
+		mid := st + (end-st)/2 //for optimization and to avoid overflow issue
 
 		if target > input[mid] {
 			st = mid + 1
