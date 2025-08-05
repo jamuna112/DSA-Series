@@ -2,7 +2,7 @@ package com.dsa;
 
 import java.util.HashSet;
 
-import com.dsa.recursion.Sum;
+import com.dsa.recursion.Rec;
 import com.dsa.searching.FruitSetExample;
 import com.dsa.searching.Fruitmap;
 
@@ -16,10 +16,12 @@ public class Main {
         Fruitmap fm = new Fruitmap();
         fm.FruitAddition();
 
-        Sum sm = new Sum();
+        Rec rec = new Rec();
 
-        int result = sm.Add(6);
+        int result = rec.Add(6);
+        int facResult = rec.Factorial(6);
 
-        System.out.println("Sum of given numbers is "+ result );
+        System.out.println("Sum of given numbers is "+ result );   
+         System.out.println("Factorial of given numbers is "+ facResult );   
     }
 }  
