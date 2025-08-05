@@ -2,6 +2,7 @@ package com.dsa;
 
 import java.util.HashSet;
 
+import com.dsa.recursion.Sum;
 import com.dsa.searching.FruitSetExample;
 import com.dsa.searching.Fruitmap;
 
@@ -14,5 +15,11 @@ public class Main {
 
         Fruitmap fm = new Fruitmap();
         fm.FruitAddition();
+
+        Sum sm = new Sum();
+
+        int result = sm.Add(6);
+
+        System.out.println("Sum of given numbers is "+ result );
     }
 }  
