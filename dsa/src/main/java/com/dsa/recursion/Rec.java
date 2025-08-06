@@ -16,6 +16,15 @@ public class Rec {
         }
         return n * Factorial(n-1);
     }
+
+    public int FebSeries(int n){
+        //time complexity = O(2^n)
+        if (n == 0 || n == 1) {
+            return n;
+        }
+
+        return FebSeries(n-1) + FebSeries(n-2);
+    }
     
 }
 

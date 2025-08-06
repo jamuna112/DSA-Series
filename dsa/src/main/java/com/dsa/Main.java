@@ -20,8 +20,10 @@ public class Main {
 
         int result = rec.Add(6);
         int facResult = rec.Factorial(6);
+        int febonacciSeries = rec.FebSeries(6);
 
         System.out.println("Sum of given numbers is "+ result );   
-         System.out.println("Factorial of given numbers is "+ facResult );   
+        System.out.println("Factorial of given numbers is "+ facResult );  
+        System.out.println("Fibonacci term of given numbers 4 is  "+ febonacciSeries );  
     }
 }  
