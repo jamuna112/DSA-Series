@@ -34,6 +34,31 @@ public class Rec {
 
         return arr[n-1] >= arr[n-2] && isSorted(arr, n - 1);
     }
+
+     public int search(int[] nums, int target) {
+
+        int start = 0;
+       int end = nums.length-1;
+
+        return binSearch(nums, target, start, end);
+        
+    }
+
+    public int binSearch(int []nums, int target, int start, int end) {
+
+        while (start <= end) {
+            int mid = (start + end)/2;
+
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] <= target) {
+                return binSearch(nums, target, mid+1, end);
+            } else {
+                return binSearch(nums, target, start, mid-1);
+            }
+        }
+        return -1;
+    }
     
 }
 
