@@ -1,7 +1,9 @@
 package com.dsa;
 
 import java.util.HashSet;
+import java.util.List;
 
+import com.dsa.recursion.Backtracking;
 import com.dsa.recursion.Rec;
 import com.dsa.searching.FruitSetExample;
 import com.dsa.searching.Fruitmap;
@@ -32,6 +34,14 @@ public class Main {
         System.out.println("Fibonacci term of given numbers 4 is  "+ febonacciSeries );  
         System.out.printf("It is %b that given array is sorted.\n", isSortArray ); 
          System.out.printf("Target %d value found in index %d\n", target, index ); 
+
+         int[] arr1 = {1, 2, 3};
+
+         Backtracking bt = new Backtracking();
+        List<List<Integer>> list =  bt.subsets(arr1);
+
+        System.out.println(list);
+         
 
     }
 }  
