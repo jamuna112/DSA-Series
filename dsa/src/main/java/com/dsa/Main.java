@@ -3,6 +3,7 @@ package com.dsa;
 import java.util.HashSet;
 import java.util.List;
 
+import com.dsa.dynamicProg.FibSeries;
 import com.dsa.recursion.Backtracking;
 import com.dsa.recursion.Rec;
 import com.dsa.searching.FruitSetExample;
@@ -41,6 +42,11 @@ public class Main {
         List<List<Integer>> list =  bt.subsets(arr1);
 
         System.out.println(list);
+
+        FibSeries fs = new FibSeries();
+        int num = 8;
+        int res = fs.Fib(num);
+        System.out.printf("Fib series of given %d num is %d\n", num, res);
          
 
     }
