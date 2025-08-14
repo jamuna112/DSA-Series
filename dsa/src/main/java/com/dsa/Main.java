@@ -51,5 +51,9 @@ public class Main {
         int steps = 5;
         int output = fs.ClimbStair(steps) ;
         System.out.printf("There are %d ways to climb %d steps\n", output, steps);
+
+        int[] arr = {2, 7, 9, 3, 1};
+        int MaxRob = fs.rob(arr);
+        System.out.println("Maximum rob of house can be " + MaxRob);
     }
 }  
