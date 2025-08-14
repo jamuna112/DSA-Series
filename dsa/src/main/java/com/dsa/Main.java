@@ -48,6 +48,8 @@ public class Main {
         int res = fs.Fib(num);
         System.out.printf("Fib series of given %d num is %d\n", num, res);
          
-
+        int steps = 5;
+        int output = fs.ClimbStair(steps) ;
+        System.out.printf("There are %d ways to climb %d steps\n", output, steps);
     }
 }  
