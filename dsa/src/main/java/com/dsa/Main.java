@@ -55,5 +55,10 @@ public class Main {
         int[] arr = {2, 7, 9, 3, 1};
         int MaxRob = fs.rob(arr);
         System.out.println("Maximum rob of house can be " + MaxRob);
+
+        int nth = 4;
+       int upStairsNum = fs.upStairs(nth);
+        System.out.printf("%d ways to reach %d number of stairs.\n", upStairsNum, nth);
+
     }
 }  
